@@ -1,0 +1,513 @@
+
+/* Reset de márgenes y paddings globales */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Barra de navegación */
+.navbar {
+    background-color:#28ad07; /* Color verde suave */
+    
+  
+}
+
+/* Contenedor del video de fondo */
+.contenedor { 
+    position: relative;
+    width: 100%;
+    height: 100vh; /* El contenedor ocupa toda la altura de la pantalla */
+    overflow: hidden;
+}
+
+/* Video de fondo */
+#video_fondo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta el video para cubrir todo el espacio sin distorsión */
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+/* Capa de oscurecimiento */
+.oscurecer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece el fondo */
+    z-index: 1;
+}
+
+/* Contenido sobre el video */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el contenido */
+    color: white; /* Texto en blanco */
+    text-align: center;
+    z-index: 2; /* Asegura que el contenido esté sobre el video y capa oscura */
+}
+
+/* Efecto hover para las tarjetas */
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+   
+    margin-top: 200px;
+    
+
+}
+
+.card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño del card un 5% */
+    box-shadow: 0 10px 20px rgba(0, 255, 13, 0.952); /* Añade sombra al hacer hover */
+}
+
+/* Botón dentro de las tarjetas */
+.card .btn {
+    background-color:   #32CD32 ; /* Naranja oscuro al hacer hover */
+    /* Fondo naranja */
+    color: white;             /* Texto blanco */
+    font-weight: bold;        /* Texto en negrita */
+    padding: 12px 20px;       /* Tamaño del botón */
+    border-radius: 50px;      /* Bordes redondeados */
+    border: none;             /* Elimina el borde predeterminado */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+/* Hover del botón */
+.card .btn:hover {
+    background-color: #4682B4; /* Naranja oscuro al hacer hover */
+    transform: scale(1.1);     /* Aumenta el tamaño del botón al pasar el mouse */
+    box-shadow: 0 4px 10px rgba(2, 201, 12, 0.2); /* Sombra al hacer hover */
+}
+
+
+
+#NC{
+
+    margin-top: 100px;
+    margin-left: 500px;
+}
+
+.contenedor-testimonios {
+    margin: 50px 0; /* Margen superior e inferior */
+    padding-left: 20px; /* Espaciado interno a la izquierda */
+}
+
+.testimonio {
+    background-color: white;
+    padding: 20px;
+    border: 4px solid;
+    border-image-source: linear-gradient(45deg, #4682B4, #32CD32); /* Gradiente en el borde */
+    border-image-slice: 1; /* Asegura que el gradiente cubra todo el borde */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(255, 87, 51, 0.2); /* Sombra de color */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+/* Aplica el hover solo a la tarjeta testimonio */
+.testimonio:hover {
+    transform: scale(1.05); /* Aumenta el tamaño de la tarjeta un 5% */
+    box-shadow: 0 10px 20px rgba(0, 209, 209, 0.952); /* Añade sombra al hacer hover */
+}
+
+.imagen-testimonio {
+    width: 80px; /* Tamaño de la imagen */
+    height: 80px;
+    border-radius: 50%; /* Forma circular */
+    object-fit: cover; /* Asegura que la imagen se vea bien */
+    border: 2px solid #00ff0d; /* Borde para destacar la imagen */
+    margin-bottom: 100px;
+}
+
+.cita {
+    font-size: 1rem; /* Tamaño de la cita */
+    font-style: italic; /* Cursiva */
+    color: #008a1e; /* Color de texto */
+    flex: 1; /* Hace que el texto ocupe el espacio disponible */
+}
+
+.autor {
+    font-size: 0.9rem; /* Tamaño más pequeño para el nombre */
+    font-weight: bold;
+    text-align: right; /* Alineación a la derecha */
+    color: #00878b; /* Color gris */
+    margin-top: 10px;
+}
+#NT {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 20px auto; /* Espaciado superior e inferior */
+    font-size: 2rem; /* Tamaño llamativo */
+    color: #028141; /* Color neutro del texto */
+    margin-bottom: 50px; /* Espaciado inferior */
+    font-family: 'Georgia', serif; /* Fuente elegante para destacar testimonios */
+    font-style: italic; /* Estilo cursivo para añadir un toque especial */
+    margin-top: 200px;
+}
+
+@media (max-width: 768px) {
+    #NT {
+        font-size: 1.5rem; /* Ajusta tamaño para pantallas más pequeñas */
+    }
+}
+
+
+
+
+
+
+
+.carousel-control-prev, .carousel-control-next {
+    margin: 0 -120px; /* Ajusta el valor de '20px' según tus necesidades */
+
+  }
+  
+/* Cambiar el color de fondo de los íconos de navegación del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #28a745; /* Cambia este color al que prefieras */
+    border-radius: 50%; /* Hace que el botón sea redondo */
+    width: 50px; /* Ajusta el tamaño del botón */
+    height: 50px;
+}
+
+/* Efecto hover para los botones */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #00c92b; /* Cambia el color al pasar el mouse */
+}
+
+
+.input_nombre, .input_correo, .input_mensaje {
+    position: relative;
+    width: 350px;
+    margin: 20px auto;
+}
+
+input, textarea {
+    width: 100%;
+    height: 60px;
+    border-radius: 6px;
+    font-size: 18px;
+    padding: 0 15px;
+    border: 2px solid #0397b1;
+    background: transparent;
+    color: #00c73c;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+textarea {
+    height: 120px;
+}
+
+input:focus, textarea:focus {
+    border-color: #00dd07;
+    background-color: rgba(0, 190, 95, 0.1);
+}
+
+.input_nombre label, .input_correo label, .input_mensaje label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    font-size: 19px;
+    color: #00f7ff;
+    pointer-events: none;
+    transition: 0.3s ease;
+    background: transparent;
+    padding: 0 5px;
+}
+input:valid ~ label, input:focus ~ label,
+textarea:valid ~ label, textarea:focus ~ label {
+    
+    top: 0;
+    left: 15px;
+    font-size: 16px;
+    padding: 0 5px;
+    background: #009ffc;
+    color: #00f521;
+    border-radius: 3px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #00ec5b;
+    color: rgb(0, 197, 0);
+    border: none;
+    border-radius: 6px;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #00ccd3;
+    transform: scale(1.05);
+}
+input[type="submit"]:active {
+    transform: scale(0.95);
+}
+
+
+/* Estilos generales para la sección */
+#promocion {
+    background-color: #05464e; /* Fondo oscuro */
+    color: #00ff00;           /* Texto en verde brillante */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin: 40px auto 20px; /* Agregado margen superior de 40px para mayor separación */
+    max-width: 500px;
+}
+
+/* Título de la promoción */
+#promocion h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Texto del mensaje */
+#promocion p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+/* Contador */
+#contador {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00eb0c; /* Texto blanco */
+    padding: 10px;
+    background-color: #00fff2; /* Fondo verde brillante */
+    border-radius: 5px;
+    display: inline-block;
+    letter-spacing: 2px;
+    animation: parpadeo 1s infinite alternate; /* Animación opcional */
+}
+
+/* Animación de parpadeo */
+@keyframes parpadeo {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.8;
+    }
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    #promocion {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    #contador {
+        font-size: 1.5rem;
+    }
+}
+.img-instructor {
+    object-fit: cover;
+    width: 100%;
+    height: 250px; /* Ajusta la altura a tu preferencia */
+}
+
+.form-control, .form-select {
+    border: 2px solid #4A90E2; /* Borde azul */
+    border-radius: 5px;
+    padding: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #357ABD; /* Azul más oscuro en enfoque */
+    box-shadow: 0 0 5px rgba(54, 122, 189, 0.5); /* Sombra azul */
+}
+
+.form-label {
+    color: #2C3E50; /* Texto oscuro */
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #2ECC71; /* Verde */
+    border-color: #27AE60; /* Verde más oscuro */
+    color: white;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #27AE60; /* Verde más oscuro al pasar el mouse */
+    border-color: #1F8C4D; /* Verde más intenso */
+}
+
+.container {
+    background-color: #ffffff; /* Fondo claro con un toque verde */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Asegurar que el footer ocupe toda la pantalla en la parte inferior */
+.footer {
+    background-color: #000000; /* Fondo claro */
+    color: #2d572c; /* Verde profesional */
+    padding: 2rem 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: auto;
+  }
+  
+  .footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-sections {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .footer-sections div {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .footer h5 {
+    color: #0b7e6e; /* Verde oscuro */
+    font-weight: bold;
+  }
+  
+  .footer p {
+    color: #05a0a0; /* Verde medio */
+    margin: 0.5rem 0;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    border-top: 1px solid #0091aa;
+    padding-top: 1rem;
+    width: 100%;
+  }
+  
+  /* Ajustes responsivos para dispositivos pequeños */
+  @media (max-width: 768px) {
+    .footer-sections {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  /* Estilo base para las tarjetas */
+.card {
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efecto hover en la tarjeta */
+  .card:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    background-color: #eafbea; /* Fondo verde claro */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+  }
+  
+  /* Estilo base para el botón */
+  .btn-primary {
+    background-color: #4caf50; /* Verde medio */
+    border-color: #4caf50;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Efecto hover en el botón */
+  .btn-primary:hover {
+    background-color: #388e3c; /* Verde más oscuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  }
+  
+
+  /* Estilo base para las tarjetas */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza los cambios */
+  }
+  
+  /* Efecto hover en la tarjeta */
+  .card:hover {
+    transform: scale(1.1); /* Aumenta el tamaño de la tarjeta */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Añade sombra */
+  }
+  #Contactos {
+    text-align: center; /* Centra horizontalmente el texto */
+    margin: 20px auto; /* Agrega espacio arriba y abajo y centra en el contenedor */
+    font-size: 1.5rem; /* Ajusta el tamaño de fuente para mayor visibilidad */
+    color: #333; /* Color del texto, puedes ajustarlo según tu diseño */
+    margin-bottom: -20px;
+    margin-top: 200px;
+  }
+
+  @media (max-width: 768px) {
+    #Contactos {
+      font-size: 1.2rem; /* Reduce el tamaño del texto en dispositivos más pequeños */
+    }
+  }  
+
+  #NC {
+    text-align: center; /* Centra horizontalmente el texto */
+    margin: 30px auto; /* Agrega espacio arriba y abajo */
+    font-size: 2.5rem; /* Tamaño de fuente grande para llamar la atención */
+    color: #0078D4; /* Azul profesional y llamativo */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    font-weight: bold; /* Hace el texto más grueso */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Agrega una sombra ligera para resaltar */
+    margin-top: 200px;
+    margin-bottom: -200px;
+}
+
+@media (max-width: 768px) {
+    #NC {
+        font-size: 2rem; /* Reduce el tamaño del texto en pantallas pequeñas */
+    }
+}
+
+#Instructores {
+    text-align: center; /* Centra el texto horizontalmente */
+    margin: 20px auto; /* Espaciado superior e inferior */
+    font-size: 2rem; /* Tamaño llamativo */
+    color: #009100; /* Color del texto */
+    margin-bottom: 50px; /* Espaciado inferior */
+    font-family: 'Georgia', serif; /* Fuente elegante */
+    text-transform: uppercase; /* Todo en mayúsculas para mayor impacto */
+    letter-spacing: 1px; /* Espaciado entre letras para legibilidad */
+    font-weight: bold; /* Resalta el título */
+    margin-top: 200px;
+    margin-bottom: -200px;
+}
+
+@media (max-width: 768px) {
+    #Instructores {
+        font-size: 1.5rem; /* Ajusta tamaño para pantallas más pequeñas */
+    }
+}
+
+#inputBusqueda {
+    width: 200px; /* Ajusta el tamaño del campo de búsqueda */
+}
